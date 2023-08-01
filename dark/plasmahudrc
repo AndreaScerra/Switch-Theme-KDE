@@ -1,0 +1,25 @@
+[General]
+Matching=fuzzy
+Sort=true
+Lines=10
+Location=center
+Width=50
+
+[Icons]
+Enabled=false
+Theme=ChromeOS
+
+[Shortcuts]
+Enabled=false
+
+[Style]
+Font=Sans 10
+Title=::
+
+[Colors]
+Background=#2E2E2E
+Foreground=#FFFFFF
+SelectedBackground=#3266D4
+SelectedForeground=#FFFFFF
+Borders=#FFFFFF
+ShortcutForeground=#888888

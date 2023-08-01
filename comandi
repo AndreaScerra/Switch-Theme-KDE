@@ -1,0 +1,30 @@
+//Cambiare tema kvantum
+light: kvantummanager --set ChromeOS
+dark: kvantummanager --set ChromeOS-dark
+
+//Cambiare tema globale
+light: lookandfeeltool -a com.github.vinceliuice.ChromeOS-light
+dark: lookandfeeltool -a com.github.vinceliuice.ChromeOS-dark
+
+//Cambiare lo sfondo
+light: dbus-send --session --dest=org.kde.plasmashell --type=method_call \
+         /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+     var Desktops = desktops();
+     for (i=0;i<Desktops.length;i++) {
+             d = Desktops[i];
+             d.wallpaperPlugin = "org.kde.image";
+             d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");
+             d.writeConfig("Image", "/home/nomec/Theme switcher/Sfondi/light.jpg");
+     }'
+
+
+
+dark: dbus-send --session --dest=org.kde.plasmashell --type=method_call \
+         /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+     var Desktops = desktops();
+     for (i=0;i<Desktops.length;i++) {
+             d = Desktops[i];
+             d.wallpaperPlugin = "org.kde.image";
+             d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");
+             d.writeConfig("Image", "/home/nomec/Theme switcher/Sfondi/dark.jpg");
+     }'
