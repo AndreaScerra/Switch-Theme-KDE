@@ -17,7 +17,7 @@ Download the latest release
 
 - **Kvantum Theme**
   
-  In **dark.sh** and **light.sh** put your kvantum theme.
+  In **dark.sh** and **light.sh** write your kvantum theme.
 
 - The other file are for my user case of HUD plasma.
 
